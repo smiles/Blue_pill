@@ -4,29 +4,19 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using BluePill.Client_Server_API.JSON;
 
-namespace BluePill.Client_Server_API.Controllers
+namespace BluePill.Server_Server_API.Controllers
 {
     [ApiController]
     [Produces("application/json")]
     public class Info : ControllerBase
     {
-        private readonly JSON.Version ver = new JSON.Version();
-
+        [Route("/.well-known/matrix/server")]
         [HttpGet]
-        [Route("/_matrix/client/versions")]
         public IActionResult Ver()
-        {
-            return Ok(ver);
-        }
-
-        [HttpGet]
-        [Route("/.well-known/matrix/client")]
-        public IActionResult Known()
         {
             return Ok();
         }
-        
+
     }
 }

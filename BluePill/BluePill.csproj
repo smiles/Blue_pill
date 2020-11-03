@@ -8,7 +8,6 @@
     <Folder Include="Application_Service_API\" />
     <Folder Include="Identity_Service_API\" />
     <Folder Include="Push_Gateway_API\" />
-    <Folder Include="Server_Server_API\" />
   </ItemGroup>
 
 </Project>
