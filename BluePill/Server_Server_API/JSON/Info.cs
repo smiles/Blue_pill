@@ -8,7 +8,16 @@ namespace BluePill.Server_Server_API.JSON
 {
     public class Info
     {
-        [JsonPropertyName("m.server")]
-        public string Server { get; }
+        [JsonPropertyName("m.homeserver")]
+        public Baseurl Home { get; }
+
+        [JsonPropertyName("m.identity_server")]
+        public Baseurl Identity { get; }
+    }
+
+    public class Baseurl
+    {
+        [JsonPropertyName("base_url")]
+        public string Base { get; }
     }
 }
